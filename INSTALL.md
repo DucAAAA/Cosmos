@@ -18,3 +18,13 @@ docker build -t cosmos .
 docker run -d --name cosmos_container --gpus all --ipc=host -it -v $(pwd):/workspace cosmos
 docker attach cosmos_container
 ```
+
+
+# Runpod
+pip install -r requirements.txt
+pip install einops
+pip install pynvml
+apt-get update
+apt-get -y install cudnn
+pip install transformer_engine[pytorch]
+pip install opencv-python
